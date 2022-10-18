@@ -1,0 +1,27 @@
+darknet路徑
+C:\Users\shutaya\Desktop\darknet-master_gup\darknet-master\build\darknet\x64
+訓練
+darknet.exe detector train data/draw_waymo.data cfg/waymo.cfg_train darknet53.conv.74 -map
+darknet.exe detector train data/draw_waymo.data cfg/waymo.cfg_train darknet53.conv.74 -map -mAP_epochs 2
+
+繼續訓練(batch size要改)
+darknet.exe detector train data/waymo.data cfg/waymo.cfg_train backup/cup-yolov3_100.weights
+單張測試
+darknet.exe detector test data/waymo.data cfg/waymo.cfg_train_test backup/waymo_last.weights data/test1.jpg -thresh 0.5
+darknet.exe detector test data/waymo.data cfg/waymo.cfg_train_test backup/waymo_last.weights data/0000050.png -thresh 0.1
+處理一系列圖片
+darknet.exe detector test cfg/coco.data cfg/yolov3.cfg yolov3.weights -dont_show -ext_output < data/train.txt > result.txt
+
+demo
+darknet.exe detector demo cfg/coco.data yolov3.cfg yolov3.weights Waymo.mkv  #保存-out_filename res.avi
+darknet.exe detector demo data/draw_waymo.data cfg/waymo.cfg_train_test backup/waymo_best.weights Waymo.mkv -out_filename test.mp4
+評估:
+
+map:darknet.exe detector valid data/waymo.data cfg/waymo.cfg_train_test  backup/waymo_last.weights
+darknet.exe detector recall data/waymo.data cfg/waymo.cfg_train_test backup/waymo_last.weights -ext_output car.txt
+mAP@IoU=50:darknet.exe detector map data/waymo.data cfg/waymo.cfg_train_test backup\waymo_last.weights
+
+
+.*0.0 0.*
+^[\s]*$[\n\r]*
+1 Epoch = images_in_train_txt / batch iterations
