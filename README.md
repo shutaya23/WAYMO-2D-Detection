@@ -2,11 +2,6 @@
 ### (neural network for object detection) - Tensor Cores can be used on [Linux](https://github.com/AlexeyAB/darknet#how-to-compile-on-linux) and [Windows](https://github.com/AlexeyAB/darknet#how-to-compile-on-windows-using-cmake-gui)
 WAYMO: https://waymo.com/open/  
 
-Paper Yolo v4: https://arxiv.org/abs/2004.10934
-
-More details: [medium link](https://medium.com/@alexeyab84/yolov4-the-most-accurate-real-time-neural-network-on-ms-coco-dataset-73adfd3602fe?source=friends_link&sk=6039748846bbcf1d960c3061542591d7)
-
-
 The Waymo Open Dataset is comprised of high resolution sensor data collected by autonomous vehicles operated by the Waymo Driver in a wide variety of conditions.  
 
 The Waymo Open Dataset currently contains 1,950 segments. The authors plan to grow this dataset in the future. Currently the datasets includes:  
@@ -25,6 +20,11 @@ High-quality labels for lidar data in 1,200 segments
 12.6M 3D bounding box labels with tracking IDs on lidar data  
 High-quality labels for camera data in 1,000 segments  
 11.8M 2D bounding box labels with tracking IDs on camera data  
+
+Paper Yolo v4: https://arxiv.org/abs/2004.10934
+
+More details: [medium link](https://medium.com/@alexeyab84/yolov4-the-most-accurate-real-time-neural-network-on-ms-coco-dataset-73adfd3602fe?source=friends_link&sk=6039748846bbcf1d960c3061542591d7)
+
 
 
 
