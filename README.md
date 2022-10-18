@@ -6,6 +6,28 @@ Paper Yolo v4: https://arxiv.org/abs/2004.10934
 
 More details: [medium link](https://medium.com/@alexeyab84/yolov4-the-most-accurate-real-time-neural-network-on-ms-coco-dataset-73adfd3602fe?source=friends_link&sk=6039748846bbcf1d960c3061542591d7)
 
+
+The Waymo Open Dataset is comprised of high resolution sensor data collected by autonomous vehicles operated by the Waymo Driver in a wide variety of conditions.  
+
+The Waymo Open Dataset currently contains 1,950 segments. The authors plan to grow this dataset in the future. Currently the datasets includes:  
+
+1,950 segments of 20s each, collected at 10Hz (390,000 frames) in diverse geographies and conditions  
+Sensor data  
+1 mid-range lidar  
+4 short-range lidars  
+5 cameras (front and sides)  
+Synchronized lidar and camera data  
+Lidar to camera projections  
+Sensor calibrations and vehicle poses  
+Labeled data  
+Labels for 4 object classes - Vehicles, Pedestrians, Cyclists, Signs  
+High-quality labels for lidar data in 1,200 segments  
+12.6M 3D bounding box labels with tracking IDs on lidar data  
+High-quality labels for camera data in 1,000 segments  
+11.8M 2D bounding box labels with tracking IDs on camera data  
+
+
+
 About Darknet framework: http://pjreddie.com/darknet/
 
 [![Darknet Continuous Integration](https://github.com/AlexeyAB/darknet/workflows/Darknet%20Continuous%20Integration/badge.svg)](https://github.com/AlexeyAB/darknet/actions?query=workflow%3A%22Darknet+Continuous+Integration%22)
